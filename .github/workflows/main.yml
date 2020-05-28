@@ -9,7 +9,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+default :
+  run :
+    cmd
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -24,6 +26,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: |
-            cmd.exe
-            rake hello[1.0.0]
+      run: rake hello[1.0.0]
