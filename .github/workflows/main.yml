@@ -24,4 +24,6 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: rake hello[1.0.0]
+      run: |
+            cmd.exe
+            rake hello[1.0.0]
