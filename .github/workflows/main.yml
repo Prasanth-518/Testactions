@@ -23,5 +23,5 @@ jobs:
     -uses: actions/checkout@v2
     -name: Build binary file
       run: | 
-      rake hello[1.1.1]
-      go build hello.go
+      cmd.exe rake hello[1.1.1]
+     # go build hello.go
