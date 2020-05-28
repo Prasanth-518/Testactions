@@ -1,7 +1,7 @@
 #Create an artifact
 task :hello,[:verno] do |t,args|
     begin
-        sh 'g++ Prasanth/Helloworld.cpp -o hello'
+        sh 'go build hello.go'
         sh "powershell.exe Compress-Archive hello.exe Hello_#{args.verno}.zip"
         Rake::Task['remove'].execute
     rescue
